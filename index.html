@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Zarpe Seguro — Términos y Privacidad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #F6F5F2;
+    --surface: #FFFFFF;
+    --surface-variant: #E9E7E2;
+    --text: #14181C;
+    --text-secondary: #52565E;
+    --outline: #75777E;
+    --outline-variant: #D6D4CE;
+    --primary: #0D1C32;
+    --on-primary: #FFFFFF;
+    --accent: #00677D;
+    --accent-soft: #E2F3F6;
+    --danger: #BA1A1A;
+    --danger-container: #FBEAE8;
+    --danger-border: #E7B8B2;
+    --warning: #92650A;
+    --warning-container: #FCF1DC;
+    --warning-border: #E9CE97;
+    --code-bg: #EDEBE4;
+    --shadow: 0 1px 2px rgba(20,24,28,0.04), 0 4px 16px rgba(20,24,28,0.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131313;
+      --surface: #1B1C1E;
+      --surface-variant: #262729;
+      --text: #ECECE9;
+      --text-secondary: #ADB0B6;
+      --outline: #5B5E63;
+      --outline-variant: #35373A;
+      --primary: #16283F;
+      --on-primary: #EAF6FA;
+      --accent: #6FE0FE;
+      --accent-soft: #16323A;
+      --danger: #FF8A80;
+      --danger-container: #3A1F1E;
+      --danger-border: #63302C;
+      --warning: #F3C766;
+      --warning-container: #362B12;
+      --warning-border: #5C4A1E;
+      --code-bg: #232427;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 4px 20px rgba(0,0,0,0.35);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; }
+  .mono {
+    font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+  }
+
+  /* ---------- Top bar ---------- */
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: var(--primary);
+    color: var(--on-primary);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    box-shadow: var(--shadow);
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+  }
+  .brand svg { flex: none; }
+  .doctabs {
+    display: flex;
+    gap: 4px;
+    background: rgba(255,255,255,0.08);
+    padding: 4px;
+    border-radius: 999px;
+  }
+  .tab {
+    appearance: none;
+    border: none;
+    background: transparent;
+    color: rgba(255,255,255,0.75);
+    font: inherit;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 13.5px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+    white-space: nowrap;
+  }
+  .tab:hover { color: #fff; }
+  .tab.active {
+    background: var(--on-primary);
+    color: var(--primary);
+  }
+
+  /* ---------- Layout ---------- */
+  .layout {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 32px 20px 80px;
+    display: grid;
+    grid-template-columns: 220px minmax(0,1fr);
+    gap: 40px;
+    align-items: start;
+  }
+  @media (max-width: 860px) {
+    .layout { grid-template-columns: 1fr; padding: 20px 16px 64px; gap: 20px; }
+    .toc { display: none; }
+  }
+
+  .toc {
+    position: sticky;
+    top: 78px;
+    font-size: 13px;
+  }
+  .toc-title {
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    color: var(--text-secondary);
+    font-size: 11px;
+    margin: 0 0 10px;
+  }
+  .toc ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-left: 2px solid var(--outline-variant);
+  }
+  .toc li a {
+    display: block;
+    padding: 6px 0 6px 14px;
+    margin-left: -2px;
+    border-left: 2px solid transparent;
+    color: var(--text-secondary);
+    text-decoration: none;
+    line-height: 1.35;
+  }
+  .toc li a:hover { color: var(--text); }
+  .toc li a.current {
+    color: var(--accent);
+    border-left-color: var(--accent);
+    font-weight: 600;
+  }
+
+  main { min-width: 0; }
+  article[hidden] { display: none !important; }
+
+  .doc-header {
+    margin-bottom: 22px;
+  }
+  .doc-header h1 {
+    font-size: clamp(26px, 4vw, 34px);
+    line-height: 1.15;
+    margin: 0 0 8px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  .doc-meta {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    color: var(--text-secondary);
+    font-size: 12.5px;
+  }
+  .doc-meta span { display: inline-flex; align-items: center; gap: 6px; }
+
+  .summary-box {
+    background: var(--surface);
+    border: 1px solid var(--outline-variant);
+    border-radius: 14px;
+    padding: 18px 20px;
+    margin: 22px 0 30px;
+    box-shadow: var(--shadow);
+  }
+  .summary-box h2 {
+    margin: 0 0 10px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .summary-box ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+  .summary-box li { margin: 6px 0; }
+  .summary-box li b { color: var(--text); }
+
+  section {
+    padding-top: 34px;
+    scroll-margin-top: 86px;
+    border-top: 1px solid var(--outline-variant);
+  }
+  section:first-of-type { border-top: none; }
+  section h2 {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 0 0 12px;
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+  }
+  section h2 .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    min-width: 22px;
+  }
+  section h3 {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 20px 0 8px;
+  }
+  section p { margin: 0 0 12px; color: var(--text); }
+  section p.muted { color: var(--text-secondary); }
+  section ul, section ol.alpha { margin: 0 0 12px; padding-left: 22px; }
+  section li { margin: 4px 0; }
+
+  table.data {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 6px 0 18px;
+    font-size: 13.5px;
+  }
+  table.data th, table.data td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--outline-variant);
+    vertical-align: top;
+  }
+  table.data th {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-secondary);
+    font-weight: 700;
+  }
+  table.data tr:last-child td { border-bottom: none; }
+  .wrap-table { overflow-x: auto; }
+
+  .callout {
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin: 14px 0 18px;
+    display: flex;
+    gap: 12px;
+    font-size: 14px;
+    border: 1px solid;
+  }
+  .callout .icon { flex: none; margin-top: 1px; }
+  .callout.danger {
+    background: var(--danger-container);
+    border-color: var(--danger-border);
+    color: var(--danger);
+  }
+  .callout.danger p { color: var(--danger); margin: 0; }
+  .callout.warning {
+    background: var(--warning-container);
+    border-color: var(--warning-border);
+    color: var(--warning);
+  }
+  .callout.warning p { color: var(--warning); margin: 0; }
+  .callout b { font-weight: 700; }
+
+  code, .kbd {
+    font-family: 'JetBrains Mono', monospace;
+    background: var(--code-bg);
+    border-radius: 4px;
+    padding: 1px 5px;
+    font-size: 0.9em;
+  }
+
+  a.link { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+  a.link:hover { text-decoration: none; }
+
+  footer {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 28px 20px 40px;
+    border-top: 1px solid var(--outline-variant);
+    color: var(--text-secondary);
+    font-size: 12.5px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M12 2v20M12 6a3 3 0 100-6 3 3 0 000 6z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M4 15c1 3 4 5 8 5s7-2 8-5M4 15l-1.5-1M4 15l1-2.2M20 15l1.5-1M20 15l-1-2.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Zarpe Seguro
+  </div>
+  <nav class="doctabs" role="tablist" aria-label="Documentos legales">
+    <button class="tab active" role="tab" aria-selected="true" data-doc="terminos">Términos y Condiciones</button>
+    <button class="tab" role="tab" aria-selected="false" data-doc="privacidad">Política de Privacidad</button>
+  </nav>
+</header>
+
+<div class="layout">
+  <aside class="toc" id="toc-terminos">
+    <p class="toc-title">En esta página</p>
+    <ol>
+      <li><a href="#t-1">1. Aceptación</a></li>
+      <li><a href="#t-2">2. Qué es Zarpe Seguro</a></li>
+      <li><a href="#t-3">3. Tu cuenta</a></li>
+      <li><a href="#t-4">4. Uso y limitaciones</a></li>
+      <li><a href="#t-5">5. El botón SOS</a></li>
+      <li><a href="#t-6">6. Conducta del usuario</a></li>
+      <li><a href="#t-7">7. Propiedad intelectual</a></li>
+      <li><a href="#t-8">8. Eliminar tu cuenta</a></li>
+      <li><a href="#t-9">9. Límite de responsabilidad</a></li>
+      <li><a href="#t-10">10. Cambios a estos términos</a></li>
+      <li><a href="#t-11">11. Ley aplicable</a></li>
+      <li><a href="#t-12">12. Contacto</a></li>
+    </ol>
+  </aside>
+  <aside class="toc" id="toc-privacidad" hidden>
+    <p class="toc-title">En esta página</p>
+    <ol>
+      <li><a href="#p-1">1. Responsable</a></li>
+      <li><a href="#p-2">2. Marco legal</a></li>
+      <li><a href="#p-3">3. Datos que recopilamos</a></li>
+      <li><a href="#p-4">4. Para qué los usamos</a></li>
+      <li><a href="#p-5">5. Con quién los compartimos</a></li>
+      <li><a href="#p-6">6. Transferencia internacional</a></li>
+      <li><a href="#p-7">7. Cuánto tiempo los guardamos / eliminar cuenta</a></li>
+      <li><a href="#p-8">8. Tus derechos</a></li>
+      <li><a href="#p-9">9. Seguridad</a></li>
+      <li><a href="#p-10">10. Menores de edad</a></li>
+      <li><a href="#p-11">11. Cambios a esta política</a></li>
+      <li><a href="#p-12">12. Contacto y autoridad</a></li>
+    </ol>
+  </aside>
+
+  <main>
+    <!-- ============ TÉRMINOS Y CONDICIONES ============ -->
+    <article id="doc-terminos">
+      <div class="doc-header">
+        <h1>Términos y Condiciones de Uso</h1>
+        <div class="doc-meta">
+          <span class="mono">v1.0</span>
+          <span>·</span>
+          <span>Vigente desde el 11 de septiembre de 2026</span>
+          <span>·</span>
+          <span>Aplica a la app Zarpe Seguro (Android)</span>
+        </div>
+      </div>
+
+      <div class="summary-box">
+        <h2>Resumen — la versión corta</h2>
+        <ul>
+          <li>Zarpe Seguro es una <b>herramienta de apoyo a la navegación</b>, no un servicio oficial de la Armada Nacional ni de DIMAR.</li>
+          <li>El oleaje, el viento y las mareas vienen de un proveedor externo (Open-Meteo) y <b>pueden fallar o no reflejar el mar real</b> en el momento de zarpar. La decisión de salir siempre es tuya.</li>
+          <li>El botón SOS depende de que tengas <b>señal, GPS y SMS funcionando</b> — no reemplaza el radio VHF ni la línea 146.</li>
+          <li>Podés <b>eliminar tu cuenta</b> cuando quieras, desde tu perfil dentro de la app o escribiéndonos si ya no la tenés instalada.</li>
+        </ul>
+      </div>
+
+      <section id="t-1">
+        <h2><span class="num">01</span>Aceptación de los términos</h2>
+        <p>Al crear una cuenta en Zarpe Seguro o al marcar la casilla de aceptación antes de iniciar sesión con Google, confirmás que leíste, entendiste y aceptás estos Términos y Condiciones y la <a href="#" class="link" data-goto="privacidad">Política de Privacidad</a>. Si no estás de acuerdo, no debés usar la app.</p>
+      </section>
+
+      <section id="t-2">
+        <h2><span class="num">02</span>Qué es Zarpe Seguro</h2>
+        <p>Zarpe Seguro es una aplicación móvil pensada para pescadores artesanales del Caribe y el Pacífico colombiano. Reúne pronóstico de oleaje y viento, semáforo de zarpe, mareas y fase lunar, navegación GPS con puntos de referencia (caladeros), bitácora de faena, calculadora de combustible, y un botón de emergencia (SOS) hacia tu contacto de confianza y la Armada Nacional.</p>
+      </section>
+
+      <section id="t-3">
+        <h2><span class="num">03</span>Tu cuenta</h2>
+        <p>Para usar Zarpe Seguro creás una cuenta con tu cuenta de Google. Sos responsable de:</p>
+        <ul>
+          <li>Que la información de tu ficha de embarcación (nombre, matrícula, tripulación, contacto de emergencia) sea real y esté actualizada — de eso depende que el SOS le avise a la persona correcta.</li>
+          <li>Mantener el acceso a tu cuenta de Google y a tu teléfono en un lugar seguro.</li>
+          <li>Ser mayor de edad, o contar con la autorización de tu acudiente si sos menor de edad.</li>
+        </ul>
+      </section>
+
+      <section id="t-4">
+        <h2><span class="num">04</span>Uso previsto y limitaciones</h2>
+        <div class="callout danger">
+          <span class="icon">⚠</span>
+          <p><b>Zarpe Seguro es una herramienta de apoyo, no un sistema de pronóstico oficial.</b> El oleaje, el viento, la visibilidad y las mareas se calculan con datos de un proveedor meteorológico externo (Open-Meteo) y pueden contener errores, retrasos o no coincidir con las condiciones reales del mar en el momento de zarpar. Los radioavisos se replican de DIMAR pero no reemplazan la fuente oficial. La decisión de zarpar, quedarse en puerto o regresar es siempre tuya, como capitán, y debe apoyarse también en tu propia observación del mar y en los canales oficiales (DIMAR, Capitanía de Puerto, Armada Nacional).</p>
+        </div>
+        <p>La app está pensada para funcionar sin conexión en la medida de lo posible (usando el último dato guardado), pero varias funciones — pronóstico actualizado, radioavisos, sincronización de tu ficha — necesitan internet.</p>
+      </section>
+
+      <section id="t-5">
+        <h2><span class="num">05</span>El botón SOS</h2>
+        <div class="callout danger">
+          <span class="icon">⚠</span>
+          <p>El botón SOS envía un mensaje de texto (SMS) automático a tu contacto de emergencia con tu ubicación, y te permite llamar directamente a la <b>línea 146 de la Armada Nacional de Colombia</b>. Esta función <b>depende de que tu teléfono tenga cobertura celular, señal GPS y la app pueda enviar SMS</b> en ese momento — ninguna de esas tres cosas está garantizada en el mar. El SOS de Zarpe Seguro <b>no reemplaza</b> un radio VHF, una baliza satelital (EPIRB/PLB), ni los protocolos oficiales de emergencia marítima. Si tu embarcación cuenta con esos medios, usalos también.</p>
+        </div>
+      </section>
+
+      <section id="t-6">
+        <h2><span class="num">06</span>Conducta del usuario</h2>
+        <p>Al usar Zarpe Seguro te comprometés a:</p>
+        <ul>
+          <li>No usar el botón SOS ni la función de contacto de emergencia fuera de una situación real.</li>
+          <li>No ingresar información falsa que pueda poner en riesgo a otra persona (por ejemplo, un contacto de emergencia que no exista).</li>
+          <li>No intentar vulnerar, copiar o interferir con el funcionamiento de la app o de los servicios en la nube que la sostienen.</li>
+          <li>Usar la app conforme a la ley colombiana.</li>
+        </ul>
+      </section>
+
+      <section id="t-7">
+        <h2><span class="num">07</span>Propiedad intelectual</h2>
+        <p>El nombre "Zarpe Seguro", el logo, el diseño y el código de la app son propiedad de su equipo desarrollador. Podés usar la app para tu propio beneficio como pescador o capitán; no podés copiarla, redistribuirla ni usar la marca sin autorización.</p>
+      </section>
+
+      <section id="t-8">
+        <h2><span class="num">08</span>Eliminar tu cuenta</h2>
+        <p>Podés eliminar tu cuenta en cualquier momento desde <span class="mono">Perfil → Eliminar mi cuenta</span>, dentro de la app. Al hacerlo, tu ficha de embarcación, capturas, cálculos de combustible y puntos marcados dejan de estar disponibles de inmediato. Si ya no tenés la app instalada, también podés pedir la eliminación por correo — el detalle de ambos caminos, qué se borra y durante cuánto tiempo queda guardada esa información antes de borrarse en definitivo, está en la <a href="#" class="link" data-goto="privacidad" data-anchor="p-7">Política de Privacidad, sección 7</a>.</p>
+      </section>
+
+      <section id="t-9">
+        <h2><span class="num">09</span>Límite de responsabilidad</h2>
+        <p>En la medida permitida por la ley colombiana, el equipo de Zarpe Seguro no se hace responsable por daños, pérdidas o perjuicios derivados de: decisiones de navegación tomadas con base en la información de la app; fallas de red, GPS o del envío del SMS de emergencia; errores o interrupciones del servicio meteorológico de terceros; o el mal uso de la app fuera de su propósito previsto. Zarpe Seguro se ofrece "tal cual" (as-is), sin garantía de disponibilidad continua ni de exactitud absoluta de los datos.</p>
+      </section>
+
+      <section id="t-10">
+        <h2><span class="num">10</span>Cambios a estos términos</h2>
+        <p>Podemos actualizar estos Términos cuando agreguemos funciones nuevas o cuando la ley lo requiera. Si el cambio es importante, te lo vamos a pedir aceptar de nuevo antes de seguir usando la app. La fecha de "vigente desde" en la parte superior siempre indica la versión actual.</p>
+      </section>
+
+      <section id="t-11">
+        <h2><span class="num">11</span>Ley aplicable</h2>
+        <p>Estos Términos se rigen por las leyes de la República de Colombia. Cualquier controversia se resolverá ante los jueces colombianos competentes.</p>
+      </section>
+
+      <section id="t-12">
+        <h2><span class="num">12</span>Contacto</h2>
+        <p>¿Preguntas sobre estos Términos? Escribinos a <a class="link" href="mailto:dimaps716@gmail.com">dimaps716@gmail.com</a>.</p>
+      </section>
+    </article>
+
+    <!-- ============ POLÍTICA DE PRIVACIDAD ============ -->
+    <article id="doc-privacidad" hidden>
+      <div class="doc-header">
+        <h1>Política de Tratamiento de Datos Personales</h1>
+        <div class="doc-meta">
+          <span class="mono">v1.0</span>
+          <span>·</span>
+          <span>Vigente desde el 11 de septiembre de 2026</span>
+          <span>·</span>
+          <span>Ley 1581 de 2012 y Decreto 1377 de 2013 (Colombia)</span>
+        </div>
+      </div>
+
+      <div class="summary-box">
+        <h2>Resumen — la versión corta</h2>
+        <ul>
+          <li>Guardamos tu <b>ficha de embarcación, contacto de emergencia, ubicación, capturas y cálculos de combustible</b> para que la app funcione y para que el botón SOS sepa a quién avisar.</li>
+          <li>Usamos <b>Google</b> para iniciar sesión y <b>Neon</b> (base de datos en la nube) para guardar tu información entre dispositivos.</li>
+          <li>Si eliminás tu cuenta, tus datos <b>dejan de estar disponibles de inmediato</b> y se <b>borran en definitivo a los 30 días</b>.</li>
+          <li>Podés pedirnos conocer, corregir o eliminar tus datos cuando quieras — <b>con o sin la app instalada</b>.</li>
+        </ul>
+      </div>
+
+      <section id="p-1">
+        <h2><span class="num">01</span>Responsable del tratamiento</h2>
+        <p>El responsable del tratamiento de tus datos personales es el equipo desarrollador de Zarpe Seguro, contactable en <a class="link" href="mailto:dimaps716@gmail.com">dimaps716@gmail.com</a>.</p>
+      </section>
+
+      <section id="p-2">
+        <h2><span class="num">02</span>Marco legal</h2>
+        <p>Esta política se rige por la <b>Ley 1581 de 2012</b> (Ley de Protección de Datos Personales de Colombia), su decreto reglamentario <b>1377 de 2013</b>, y demás normas que las modifiquen o complementen. Al aceptar esta política, autorizás el tratamiento de tus datos personales conforme a lo descrito acá.</p>
+      </section>
+
+      <section id="p-3">
+        <h2><span class="num">03</span>Datos que recopilamos</h2>
+        <p>Solo recopilamos lo necesario para que la app funcione. Concretamente:</p>
+        <div class="wrap-table">
+          <table class="data">
+            <thead>
+              <tr><th>Categoría</th><th>Datos</th><th>Cómo se obtienen</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cuenta</td>
+                <td>Nombre, correo electrónico, foto de perfil</td>
+                <td>De tu cuenta de Google, al iniciar sesión</td>
+              </tr>
+              <tr>
+                <td>Ficha de embarcación</td>
+                <td>Nombre y matrícula del bote, nombre del capitán, tripulantes a bordo, motor, nombre y teléfono del contacto de emergencia, foto opcional</td>
+                <td>La escribís vos al registrar tu embarcación</td>
+              </tr>
+              <tr>
+                <td>Ubicación</td>
+                <td>Posición GPS en tiempo real, puntos marcados en el mapa (caladeros)</td>
+                <td>El GPS de tu teléfono, mientras usás la app</td>
+              </tr>
+              <tr>
+                <td>Bitácora de faena</td>
+                <td>Especie, peso, cantidad, carnada usada, coordenadas, foto opcional</td>
+                <td>La registrás vos al guardar una captura</td>
+              </tr>
+              <tr>
+                <td>Combustible</td>
+                <td>Distancia, motor, velocidad, costo estimado del viaje</td>
+                <td>Se calcula con los datos que ingresás</td>
+              </tr>
+              <tr>
+                <td>Alertas SOS</td>
+                <td>Ubicación, hora y tipo de alerta emitida</td>
+                <td>Se registra automáticamente cuando activás el SOS</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="p-4">
+        <h2><span class="num">04</span>Para qué usamos tus datos</h2>
+        <ul>
+          <li>Mostrarte el pronóstico, las mareas y el semáforo de zarpe de tu puerto.</li>
+          <li>Guardar tu ficha de embarcación, capturas, combustible y puntos marcados, y mantenerlos disponibles si cambiás de celular.</li>
+          <li>Activar el botón SOS: avisarle a tu contacto de emergencia por SMS con tu ubicación, y permitirte llamar a la línea 146.</li>
+          <li>Detectar y avisarte de alertas relevantes para tu zona (clima severo, radioavisos DIMAR).</li>
+        </ul>
+        <p>No usamos tus datos para publicidad ni los vendemos a terceros.</p>
+      </section>
+
+      <section id="p-5">
+        <h2><span class="num">05</span>Con quién compartimos tus datos</h2>
+        <p>Trabajamos con proveedores de tecnología que actúan como <b>encargados del tratamiento</b> — procesan tus datos solo para prestarnos el servicio, no son dueños de tu información:</p>
+        <div class="wrap-table">
+          <table class="data">
+            <thead><tr><th>Proveedor</th><th>Para qué</th></tr></thead>
+            <tbody>
+              <tr><td>Google Firebase</td><td>Inicio de sesión con tu cuenta de Google</td></tr>
+              <tr><td>Neon (base de datos)</td><td>Guarda tu ficha, capturas, combustible y puntos marcados en la nube</td></tr>
+              <tr><td>Open-Meteo</td><td>Recibe la ubicación aproximada de tu puerto para calcular el pronóstico — no recibe tu identidad</td></tr>
+              <tr><td>DIMAR (radioavisos públicos)</td><td>Fuente de los avisos a los navegantes que mostramos en la app — no le enviamos ningún dato tuyo</td></tr>
+              <tr><td>Tu contacto de emergencia</td><td>Recibe un SMS con tu ubicación solo si activás el SOS</td></tr>
+              <tr><td>Armada Nacional (línea 146)</td><td>Solo si llamás desde el botón SOS</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="p-6">
+        <h2><span class="num">06</span>Transferencia internacional de datos</h2>
+        <p>Google Firebase y Neon pueden almacenar tu información en servidores fuera de Colombia (Estados Unidos). Esta transferencia es necesaria para prestarte el servicio y se realiza con proveedores que cuentan con medidas de seguridad reconocidas internacionalmente.</p>
+      </section>
+
+      <section id="p-7">
+        <h2><span class="num">07</span>Cuánto tiempo guardamos tus datos / eliminar tu cuenta</h2>
+        <p><b>Si tenés la app instalada:</b> andá a <span class="mono">Perfil → Eliminar mi cuenta</span> y confirmá. Es inmediato.</p>
+        <p><b>Si ya no tenés la app instalada:</b> escribinos a <a class="link" href="mailto:dimaps716@gmail.com">dimaps716@gmail.com</a> desde el correo asociado a tu cuenta de Google, indicando "Eliminar mi cuenta de Zarpe Seguro" en el asunto. Procesamos la solicitud manualmente en un plazo máximo de 5 días hábiles.</p>
+        <p>En cualquiera de los dos casos, el proceso es el mismo:</p>
+        <ol class="alpha">
+          <li>Tu acceso y tus datos dejan de estar disponibles para la app <b>de inmediato</b> (o al procesar tu solicitud por correo).</li>
+          <li>La información — ficha de embarcación, capturas, cálculos de combustible, puntos marcados y registro de aceptación de estos Términos — queda guardada, sin poder usarse, durante <b>30 días</b>, por si necesitás soporte o hay un trámite legal en curso.</li>
+          <li>Pasado ese plazo, se <b>borra en definitivo y de forma automática</b> de nuestra base de datos. No conservamos copias más allá de ese período.</li>
+        </ol>
+      </section>
+
+      <section id="p-8">
+        <h2><span class="num">08</span>Tus derechos (Habeas Data)</h2>
+        <p>Como titular de tus datos personales, tenés derecho a:</p>
+        <ul>
+          <li><b>Conocer</b> qué datos tuyos tenemos guardados.</li>
+          <li><b>Actualizar y rectificar</b> tu información cuando esté incompleta o sea incorrecta.</li>
+          <li><b>Suprimir</b> tus datos — eliminando tu cuenta desde la app o por correo, como se describe en la sección 7.</li>
+          <li><b>Revocar</b> la autorización que nos diste para tratar tus datos.</li>
+          <li><b>Presentar quejas</b> ante la Superintendencia de Industria y Comercio si considerás que no respetamos tus derechos.</li>
+        </ul>
+        <p>Para actualizar tu ficha, hacelo directamente desde la app. Para cualquier otra solicitud sobre tus datos, escribinos a <a class="link" href="mailto:dimaps716@gmail.com">dimaps716@gmail.com</a>.</p>
+      </section>
+
+      <section id="p-9">
+        <h2><span class="num">09</span>Seguridad de la información</h2>
+        <p>Tu información viaja siempre cifrada (HTTPS/TLS) entre la app y nuestros servidores. En la base de datos, cada usuario solo puede leer y modificar su propia información — nadie más, ni siquiera otro usuario de la app, puede ver tu ficha, tu ubicación ni tus capturas.</p>
+      </section>
+
+      <section id="p-10">
+        <h2><span class="num">10</span>Menores de edad</h2>
+        <p>Zarpe Seguro no está dirigida a menores de 18 años. Si sos menor de edad, necesitás la autorización de tu padre, madre o acudiente para crear una cuenta.</p>
+      </section>
+
+      <section id="p-11">
+        <h2><span class="num">11</span>Cambios a esta política</h2>
+        <p>Si cambiamos esta política de forma importante — por ejemplo, si empezamos a usar tus datos para algo nuevo — te lo vamos a pedir aceptar de nuevo antes de seguir usando la app.</p>
+      </section>
+
+      <section id="p-12">
+        <h2><span class="num">12</span>Contacto y autoridad de vigilancia</h2>
+        <p>Escribinos a <a class="link" href="mailto:dimaps716@gmail.com">dimaps716@gmail.com</a> por cualquier duda sobre el tratamiento de tus datos.</p>
+        <p>En Colombia, la autoridad de vigilancia en protección de datos personales es la <b>Superintendencia de Industria y Comercio (SIC)</b>.</p>
+      </section>
+    </article>
+  </main>
+</div>
+
+<footer>
+  <span>© 2026 Zarpe Seguro</span>
+  <span class="mono">v1.0 · 2026-09-11</span>
+</footer>
+
+<script>
+  (function () {
+    var tabs = document.querySelectorAll('.tab');
+    var docs = { terminos: document.getElementById('doc-terminos'), privacidad: document.getElementById('doc-privacidad') };
+    var tocs = { terminos: document.getElementById('toc-terminos'), privacidad: document.getElementById('toc-privacidad') };
+
+    function activate(doc, anchor) {
+      Object.keys(docs).forEach(function (key) {
+        var isActive = key === doc;
+        docs[key].hidden = !isActive;
+        tocs[key].hidden = !isActive;
+      });
+      tabs.forEach(function (t) {
+        var isActive = t.getAttribute('data-doc') === doc;
+        t.classList.toggle('active', isActive);
+        t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+      if (anchor) {
+        var el = document.getElementById(anchor);
+        if (el) { requestAnimationFrame(function () { el.scrollIntoView({ block: 'start' }); }); }
+      } else {
+        window.scrollTo({ top: 0 });
+      }
+    }
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        var doc = tab.getAttribute('data-doc');
+        activate(doc);
+        history.replaceState(null, '', '#' + doc);
+      });
+    });
+
+    document.querySelectorAll('[data-goto]').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        var doc = link.getAttribute('data-goto');
+        var anchor = link.getAttribute('data-anchor');
+        activate(doc, anchor);
+        history.replaceState(null, '', '#' + (anchor || doc));
+      });
+    });
+
+    // Deep-link on load: #privacidad, #p-7, #t-5, etc.
+    var hash = location.hash.replace('#', '');
+    if (hash) {
+      if (hash === 'privacidad' || hash.indexOf('p-') === 0) {
+        activate('privacidad', hash === 'privacidad' ? null : hash);
+      } else if (hash === 'terminos' || hash.indexOf('t-') === 0) {
+        activate('terminos', hash === 'terminos' ? null : hash);
+      }
+    }
+
+    // Highlight current section in the visible TOC while scrolling
+    var sections = document.querySelectorAll('section[id]');
+    var tocLinks = document.querySelectorAll('.toc a');
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var id = entry.target.id;
+        tocLinks.forEach(function (a) {
+          a.classList.toggle('current', a.getAttribute('href') === '#' + id);
+        });
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    sections.forEach(function (s) { observer.observe(s); });
+  })();
+</script>
+
+</body>
+</html>
