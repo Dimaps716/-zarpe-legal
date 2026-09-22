@@ -380,9 +380,9 @@
       <div class="doc-header">
         <h1>Términos y Condiciones de Uso</h1>
         <div class="doc-meta">
-          <span class="mono">v1.0</span>
+          <span class="mono">v1.1</span>
           <span>·</span>
-          <span>Vigente desde el 11 de septiembre de 2026</span>
+          <span>Vigente desde el 22 de septiembre de 2026</span>
           <span>·</span>
           <span>Aplica a la app Zarpe Seguro (Android)</span>
         </div>
@@ -394,6 +394,7 @@
           <li>Zarpe Seguro es una <b>herramienta de apoyo a la navegación</b>, no un servicio oficial de la Armada Nacional ni de DIMAR.</li>
           <li>El oleaje, el viento y las mareas vienen de un proveedor externo (Open-Meteo) y <b>pueden fallar o no reflejar el mar real</b> en el momento de zarpar. La decisión de salir siempre es tuya.</li>
           <li>El botón SOS depende de que tengas <b>señal, GPS y SMS funcionando</b> — no reemplaza el radio VHF ni la línea 146.</li>
+          <li>Usamos analítica de uso y reporte de fallos (<b>PostHog</b> y <b>Sentry</b>) para mejorar la app, de forma anónima — más detalle en la Política de Privacidad.</li>
           <li>Puedes <b>eliminar tu cuenta</b> cuando quieras, desde tu perfil dentro de la app o escribiéndonos si ya no la tienes instalada.</li>
         </ul>
       </div>
@@ -425,6 +426,7 @@
           <p><b>Zarpe Seguro es una herramienta de apoyo, no un sistema de pronóstico oficial.</b> El oleaje, el viento, la visibilidad y las mareas se calculan con datos de un proveedor meteorológico externo (Open-Meteo) y pueden contener errores, retrasos o no coincidir con las condiciones reales del mar en el momento de zarpar. Los radioavisos se replican de DIMAR pero no reemplazan la fuente oficial. La decisión de zarpar, quedarse en puerto o regresar es siempre tuya, como capitán, y debe apoyarse también en tu propia observación del mar y en los canales oficiales (DIMAR, Capitanía de Puerto, Armada Nacional).</p>
         </div>
         <p>La app está pensada para funcionar sin conexión en la medida de lo posible (usando el último dato guardado), pero varias funciones — pronóstico actualizado, radioavisos, sincronización de tu ficha — necesitan internet.</p>
+        <p>La app también usa herramientas de analítica de uso y de reporte de fallos técnicos (PostHog y Sentry) para entender cómo se usa y corregir errores. Qué recogen exactamente y con quién se comparte está en la <a href="#" class="link" data-goto="privacidad" data-anchor="p-5">Política de Privacidad, sección 5</a>.</p>
       </section>
 
       <section id="t-5">
@@ -482,9 +484,9 @@
       <div class="doc-header">
         <h1>Política de Tratamiento de Datos Personales</h1>
         <div class="doc-meta">
-          <span class="mono">v1.0</span>
+          <span class="mono">v1.1</span>
           <span>·</span>
-          <span>Vigente desde el 11 de septiembre de 2026</span>
+          <span>Vigente desde el 22 de septiembre de 2026</span>
           <span>·</span>
           <span>Ley 1581 de 2012 y Decreto 1377 de 2013 (Colombia)</span>
         </div>
@@ -495,6 +497,7 @@
         <ul>
           <li>Guardamos tu <b>ficha de embarcación, contacto de emergencia, ubicación, capturas y cálculos de combustible</b> para que la app funcione y para que el botón SOS sepa a quién avisar.</li>
           <li>Usamos <b>Google</b> para iniciar sesión y <b>Neon</b> (base de datos en la nube) para guardar tu información entre dispositivos.</li>
+          <li>Usamos <b>PostHog</b> (analítica de uso) y <b>Sentry</b> (reporte de fallos) para mejorar la app — con un identificador anónimo del teléfono, nunca tu nombre ni tu correo.</li>
           <li>Si eliminas tu cuenta, tus datos <b>dejan de estar disponibles de inmediato</b> y se <b>borran en definitivo a los 30 días</b>.</li>
           <li>Puedes pedirnos conocer, corregir o eliminar tus datos cuando quieras — <b>con o sin la app instalada</b>.</li>
         </ul>
@@ -549,6 +552,11 @@
                 <td>Ubicación, hora y tipo de alerta emitida</td>
                 <td>Se registra automáticamente cuando activas el SOS</td>
               </tr>
+              <tr>
+                <td>Uso de la app y fallas técnicas</td>
+                <td>Qué pantallas visitas, qué alertas se disparan y si registras una captura o un cálculo — y, si la app falla, un reporte técnico con el modelo del teléfono y la versión de Android. No incluye tu nombre ni tu correo.</td>
+                <td>Se genera automáticamente mientras usas la app (PostHog y Sentry, ver sección 5)</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -561,6 +569,7 @@
           <li>Guardar tu ficha de embarcación, capturas, combustible y puntos marcados, y mantenerlos disponibles si cambias de celular.</li>
           <li>Activar el botón SOS: avisarle a tu contacto de emergencia por SMS con tu ubicación, y permitirte llamar a la línea 146.</li>
           <li>Detectar y avisarte de alertas relevantes para tu zona (clima severo, radioavisos DIMAR).</li>
+          <li>Entender qué partes de la app se usan y corregir fallas técnicas, con herramientas de analítica y monitoreo (ver sección 5).</li>
         </ul>
         <p>No usamos tus datos para publicidad ni los vendemos a terceros.</p>
       </section>
@@ -576,16 +585,19 @@
               <tr><td>Neon (base de datos)</td><td>Guarda tu ficha, capturas, combustible y puntos marcados en la nube</td></tr>
               <tr><td>Open-Meteo</td><td>Recibe la ubicación aproximada de tu puerto para calcular el pronóstico — no recibe tu identidad</td></tr>
               <tr><td>DIMAR (radioavisos públicos)</td><td>Fuente de los avisos a los navegantes que mostramos en la app — no le enviamos ningún dato tuyo</td></tr>
+              <tr><td>PostHog (analítica de producto)</td><td>Entiende qué partes de la app se usan y si las alertas funcionan. Recibe un identificador anónimo del teléfono, generado por la app — nunca tu nombre, tu correo ni tu cuenta de Google</td></tr>
+              <tr><td>Sentry (reporte de fallos)</td><td>Recibe un reporte técnico automático cuando la app falla — modelo del teléfono, versión de Android y los pasos previos al error — para poder corregirlo</td></tr>
               <tr><td>Tu contacto de emergencia</td><td>Recibe un SMS con tu ubicación solo si activas el SOS</td></tr>
               <tr><td>Armada Nacional (línea 146)</td><td>Solo si llamas desde el botón SOS</td></tr>
             </tbody>
           </table>
         </div>
+        <p class="muted">PostHog y Sentry no reciben tu nombre, tu correo ni tu cuenta de Google: te identifican solo por un código generado en tu propio teléfono. Puedes pedirnos el detalle exacto de qué se ha enviado escribiéndonos (sección 12).</p>
       </section>
 
       <section id="p-6">
         <h2><span class="num">06</span>Transferencia internacional de datos</h2>
-        <p>Google Firebase y Neon pueden almacenar tu información en servidores fuera de Colombia (Estados Unidos). Esta transferencia es necesaria para prestarte el servicio y se realiza con proveedores que cuentan con medidas de seguridad reconocidas internacionalmente.</p>
+        <p>Google Firebase, Neon, PostHog y Sentry pueden almacenar tu información en servidores fuera de Colombia (Estados Unidos). Esta transferencia es necesaria para prestarte el servicio y se realiza con proveedores que cuentan con medidas de seguridad reconocidas internacionalmente.</p>
       </section>
 
       <section id="p-7">
@@ -639,7 +651,7 @@
 
 <footer>
   <span>© 2026 Zarpe Seguro</span>
-  <span class="mono">v1.0 · 2026-09-11</span>
+  <span class="mono">v1.1 · 2026-09-22</span>
 </footer>
 
 <script>
