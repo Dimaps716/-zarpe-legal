@@ -382,7 +382,7 @@
         <div class="doc-meta">
           <span class="mono">v1.1</span>
           <span>·</span>
-          <span>Vigente desde el 22 de septiembre de 2026</span>
+          <span>Vigente desde el 22 de septiembre de 2026 · actualizado el 18 de octubre de 2026</span>
           <span>·</span>
           <span>Aplica a la app Zarpe Seguro (Android)</span>
         </div>
@@ -424,7 +424,7 @@
         <div class="callout danger">
           <span class="icon">⚠</span>
           <p><b>Zarpe Seguro es una herramienta de apoyo, no un sistema de pronóstico oficial.</b> El oleaje, el viento, la visibilidad y las mareas se calculan con datos de un proveedor meteorológico externo (Open-Meteo) y pueden contener errores, retrasos o no coincidir con las condiciones reales del mar en el momento de zarpar. Los radioavisos se replican de DIMAR pero no reemplazan la fuente oficial. La decisión de zarpar, quedarse en puerto o regresar es siempre tuya, como capitán, y debe apoyarse también en tu propia observación del mar y en los canales oficiales (DIMAR, Capitanía de Puerto, Armada Nacional).</p>
-          <p><b>Fuentes de los datos.</b> Pronóstico del tiempo, del mar, índice UV y calidad del aire: <a href="https://open-meteo.com/">Open-Meteo.com</a>, bajo licencia <a href="https://creativecommons.org/licenses/by/4.0/deed.es">CC BY 4.0</a>; la calidad del aire incluye información del Servicio de Vigilancia Atmosférica de Copernicus (CAMS). Zarpe Seguro adapta estos datos (los resume, los combina y calcula el semáforo). Rayos y lluvia en vivo: satélite GOES-19 de la NOAA. Mareas: tablas de DIMAR/CCCP y modelo GOT5.5 de la NASA. Radioavisos y boletines: DIMAR. Alertas oficiales: IDEAM. Vedas: anuncios de la AUNAP. Mapa: formas de la tierra de Natural Earth (dominio público); municipios del DANE; nombres y posiciones de islas, cabos, golfos, bahías y bajos de <a href="https://www.geonames.org/">GeoNames</a>, bajo licencia <a href="https://creativecommons.org/licenses/by/4.0/deed.es">CC BY 4.0</a>, que Zarpe Seguro adapta (los filtra y los ordena). El mapa sirve para ubicarse; no es una carta náutica.</p>
+          <p><b>Fuentes de los datos.</b> Pronóstico del tiempo, del mar, índice UV y calidad del aire: <a href="https://open-meteo.com/">Open-Meteo.com</a>, bajo licencia <a href="https://creativecommons.org/licenses/by/4.0/deed.es">CC BY 4.0</a>; la calidad del aire incluye información del Servicio de Vigilancia Atmosférica de Copernicus (CAMS). Zarpe Seguro adapta estos datos (los resume, los combina y calcula el semáforo). Rayos y lluvia en vivo: satélite GOES-19 de la NOAA. Mareas: tablas de DIMAR/CCCP y modelo GOT5.5 de la NASA. Radioavisos y boletines: DIMAR. Alertas oficiales: IDEAM. Vedas: anuncios de la AUNAP. Mapa: formas de la tierra de Natural Earth (dominio público); municipios del DANE; nombres y posiciones de islas, cabos, golfos, bahías y bajos de <a href="https://www.geonames.org/">GeoNames</a>, bajo licencia <a href="https://creativecommons.org/licenses/by/4.0/deed.es">CC BY 4.0</a>, que Zarpe Seguro adapta (los filtra y los ordena). Líneas de profundidad del GPS: trazadas por Zarpe Seguro a partir del modelo de relieve <a href="https://www.ncei.noaa.gov/products/etopo-global-relief-model">ETOPO 2022</a> de la NOAA (dominio público); son aproximadas, sobre todo cerca de la costa. El mapa sirve para ubicarse; no es una carta náutica ni reemplaza las cartas oficiales de DIMAR.</p>
         </div>
         <p>La app está pensada para funcionar sin conexión en la medida de lo posible (usando el último dato guardado), pero varias funciones — pronóstico actualizado, radioavisos, sincronización de tu ficha — necesitan internet.</p>
         <p>La app también usa herramientas de analítica de uso y de reporte de fallos técnicos (PostHog y Sentry) para entender cómo se usa y corregir errores. Qué recogen exactamente y con quién se comparte está en la <a href="#" class="link" data-goto="privacidad" data-anchor="p-5">Política de Privacidad, sección 5</a>.</p>
@@ -487,7 +487,7 @@
         <div class="doc-meta">
           <span class="mono">v1.1</span>
           <span>·</span>
-          <span>Vigente desde el 22 de septiembre de 2026</span>
+          <span>Vigente desde el 22 de septiembre de 2026 · actualizado el 18 de octubre de 2026</span>
           <span>·</span>
           <span>Ley 1581 de 2012 y Decreto 1377 de 2013 (Colombia)</span>
         </div>
@@ -497,7 +497,7 @@
         <h2>Resumen — la versión corta</h2>
         <ul>
           <li>Guardamos tu <b>ficha de embarcación, contacto de emergencia, ubicación, capturas y cálculos de combustible</b> para que la app funcione y para que el botón SOS sepa a quién avisar.</li>
-          <li>Usamos <b>Google</b> para iniciar sesión y <b>Neon</b> (base de datos en la nube) para guardar tu información entre dispositivos.</li>
+          <li>Usamos <b>Google</b> para iniciar sesión y nuestro propio <b>servidor</b> (alojado en Hetzner, Alemania) para guardar tu información entre dispositivos.</li>
           <li>Usamos <b>PostHog</b> (analítica de uso) y <b>Sentry</b> (reporte de fallos) para mejorar la app — con un identificador anónimo del teléfono, nunca tu nombre ni tu correo.</li>
           <li>Si eliminas tu cuenta, tus datos <b>dejan de estar disponibles de inmediato</b> y se <b>borran en definitivo a los 30 días</b>.</li>
           <li>Puedes pedirnos conocer, corregir o eliminar tus datos cuando quieras — <b>con o sin la app instalada</b>.</li>
@@ -583,7 +583,8 @@
             <thead><tr><th>Proveedor</th><th>Para qué</th></tr></thead>
             <tbody>
               <tr><td>Google Firebase</td><td>Inicio de sesión con tu cuenta de Google</td></tr>
-              <tr><td>Neon (base de datos)</td><td>Guarda tu ficha, capturas, combustible y puntos marcados en la nube</td></tr>
+              <tr><td>Hetzner (alojamiento del servidor)</td><td>Aloja el servidor y la base de datos de Zarpe Seguro, donde se guardan tu ficha, capturas, combustible y puntos de pesca. Hetzner presta la máquina; no accede a tu información</td></tr>
+              <tr><td>Neon (base de datos anterior)</td><td>Guardó esa información hasta octubre de 2026 y todavía guarda las fotos de las embarcaciones. Los datos que quedan allí se trasladan a nuestro servidor y se borran de Neon</td></tr>
               <tr><td>Open-Meteo</td><td>Recibe la ubicación aproximada de tu puerto para calcular el pronóstico — no recibe tu identidad</td></tr>
               <tr><td>DIMAR (radioavisos públicos)</td><td>Fuente de los avisos a los navegantes que mostramos en la app — no le enviamos ningún dato tuyo</td></tr>
               <tr><td>PostHog (analítica de producto)</td><td>Entiende qué partes de la app se usan y si las alertas funcionan. Recibe un identificador anónimo del teléfono, generado por la app — nunca tu nombre, tu correo ni tu cuenta de Google</td></tr>
@@ -598,7 +599,7 @@
 
       <section id="p-6">
         <h2><span class="num">06</span>Transferencia internacional de datos</h2>
-        <p>Google Firebase, Neon, PostHog y Sentry pueden almacenar tu información en servidores fuera de Colombia (Estados Unidos). Esta transferencia es necesaria para prestarte el servicio y se realiza con proveedores que cuentan con medidas de seguridad reconocidas internacionalmente.</p>
+        <p>Nuestro servidor está en Alemania (Hetzner, Unión Europea, donde rige el Reglamento General de Protección de Datos). Google Firebase, Neon, PostHog y Sentry pueden almacenar tu información en servidores fuera de Colombia (Estados Unidos). Esta transferencia es necesaria para prestarte el servicio y se realiza con proveedores que cuentan con medidas de seguridad reconocidas internacionalmente.</p>
       </section>
 
       <section id="p-7">
