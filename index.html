@@ -382,7 +382,7 @@
         <div class="doc-meta">
           <span class="mono">v1.1</span>
           <span>·</span>
-          <span>Vigente desde el 22 de septiembre de 2026 · actualizado el 18 de octubre de 2026</span>
+          <span>Vigente desde el 22 de septiembre de 2026 · actualizado el 22 de octubre de 2026</span>
           <span>·</span>
           <span>Aplica a la app Zarpe Seguro (Android)</span>
         </div>
@@ -391,9 +391,9 @@
       <div class="summary-box">
         <h2>Resumen — la versión corta</h2>
         <ul>
-          <li>Zarpe Seguro es una <b>herramienta de apoyo a la navegación</b>, no un servicio oficial de la Armada Nacional ni de DIMAR.</li>
-          <li>El oleaje, el viento y las mareas vienen de un proveedor externo (Open-Meteo) y <b>pueden fallar o no reflejar el mar real</b> en el momento de zarpar. La decisión de salir siempre es tuya.</li>
-          <li>El botón SOS depende de que tengas <b>señal, GPS y SMS funcionando</b> — no reemplaza el radio VHF ni la línea 146.</li>
+          <li>Zarpe Seguro es una <b>herramienta de apoyo</b>, no una autoridad ni un servicio oficial de la Armada Nacional, DIMAR o IDEAM. <b>Solo recomienda</b>: las decisiones oficiales son de DIMAR, la Capitanía de Puerto y Guardacostas, y la decisión de salir siempre es tuya.</li>
+          <li>El pronóstico, las mareas, los rayos y los avisos vienen de fuentes externas y <b>pueden fallar, llegar tarde o no reflejar el mar real</b>. Sin señal no te llegan avisos nuevos.</li>
+          <li>El botón SOS <b>abre un mensaje de texto ya escrito</b> para tu contacto de emergencia, con tu ubicación: <b>tú lo envías</b>. Depende de que tengas señal, GPS y saldo para SMS, y no reemplaza el radio VHF ni la línea 146.</li>
           <li>Usamos analítica de uso y reporte de fallos (<b>PostHog</b> y <b>Sentry</b>) para mejorar la app, de forma anónima — más detalle en la Política de Privacidad.</li>
           <li>Puedes <b>eliminar tu cuenta</b> cuando quieras, desde tu perfil dentro de la app o escribiéndonos si ya no la tienes instalada.</li>
         </ul>
@@ -406,14 +406,16 @@
 
       <section id="t-2">
         <h2><span class="num">02</span>Qué es Zarpe Seguro</h2>
-        <p>Zarpe Seguro es una aplicación móvil pensada para pescadores artesanales del Caribe y el Pacífico colombiano. Reúne pronóstico de oleaje y viento, semáforo de zarpe, mareas y fase lunar, navegación GPS con puntos de referencia (caladeros), bitácora de faena, calculadora de combustible, y un botón de emergencia (SOS) hacia tu contacto de confianza y la Armada Nacional.</p>
+        <p>Zarpe Seguro es una aplicación móvil pensada para los pescadores artesanales del Caribe y el Pacífico colombiano y para quienes viven en la costa. Reúne pronóstico de oleaje, viento y lluvia, semáforo de zarpe, mareas, sol y luna, mapa con lluvia y rayos en vivo, avisos de tormentas y alertas oficiales, navegación GPS con puntos de pesca, bitácora de faena, calculadora de combustible, vedas, y un botón de emergencia (SOS) para avisar a tu contacto de confianza y llamar a las líneas de emergencia.</p>
+        <p>Al entrar eliges tu perfil: <b>«Soy pescador»</b> (con las funciones del barco y del zarpe) o <b>«No soy pescador»</b> (clima, mapa, mareas y avisos, sin funciones del barco). Puedes cambiarlo cuando quieras desde tu perfil.</p>
       </section>
 
       <section id="t-3">
         <h2><span class="num">03</span>Tu cuenta</h2>
         <p>Para usar Zarpe Seguro creas una cuenta con tu cuenta de Google. Eres responsable de:</p>
         <ul>
-          <li>Que la información de tu ficha de embarcación (nombre, matrícula, tripulación, contacto de emergencia) sea real y esté actualizada — de eso depende que el SOS le avise a la persona correcta.</li>
+          <li>Que la información de tu perfil y, si pescas, de tu ficha de embarcación (nombre, matrícula, tripulación) sea real y esté actualizada.</li>
+          <li>Que tu contacto de emergencia sea correcto y que <b>esa persona sepa y esté de acuerdo</b> en que la pusiste — de eso depende que el SOS le llegue a quien debe.</li>
           <li>Mantener el acceso a tu cuenta de Google y a tu teléfono en un lugar seguro.</li>
           <li>Ser mayor de edad, o contar con la autorización de tu acudiente si eres menor de edad.</li>
         </ul>
@@ -423,10 +425,12 @@
         <h2><span class="num">04</span>Uso previsto y limitaciones</h2>
         <div class="callout danger">
           <span class="icon">⚠</span>
-          <p><b>Zarpe Seguro es una herramienta de apoyo, no un sistema de pronóstico oficial.</b> El oleaje, el viento, la visibilidad y las mareas se calculan con datos de un proveedor meteorológico externo (Open-Meteo) y pueden contener errores, retrasos o no coincidir con las condiciones reales del mar en el momento de zarpar. Los radioavisos se replican de DIMAR pero no reemplazan la fuente oficial. La decisión de zarpar, quedarse en puerto o regresar es siempre tuya, como capitán, y debe apoyarse también en tu propia observación del mar y en los canales oficiales (DIMAR, Capitanía de Puerto, Armada Nacional).</p>
+          <p><b>Zarpe Seguro es una herramienta de apoyo, no un sistema de pronóstico oficial ni una autoridad.</b> El oleaje, el viento, la lluvia, la visibilidad, las mareas y los rayos se calculan con datos de fuentes externas (ver «Fuentes de los datos») y pueden contener errores, retrasos o no coincidir con las condiciones reales en el momento de zarpar. Los radioavisos de DIMAR y las alertas de IDEAM se muestran tal como esas entidades los publican, pero no reemplazan la fuente oficial.</p>
+          <p><b>La app solo recomienda.</b> Cuando dice, por ejemplo, «se recomienda no zarpar» o «se recomienda buscar refugio», es una recomendación, no una orden. Las decisiones que valen son las de DIMAR, la Capitanía de Puerto y Guardacostas. La decisión de zarpar, quedarse en puerto o regresar es siempre tuya, como capitán, y debe apoyarse también en tu propia observación del mar y en esos canales oficiales.</p>
           <p><b>Fuentes de los datos.</b> Pronóstico del tiempo, del mar, índice UV y calidad del aire: <a href="https://open-meteo.com/">Open-Meteo.com</a>, bajo licencia <a href="https://creativecommons.org/licenses/by/4.0/deed.es">CC BY 4.0</a>; la calidad del aire incluye información del Servicio de Vigilancia Atmosférica de Copernicus (CAMS). Zarpe Seguro adapta estos datos (los resume, los combina y calcula el semáforo). Rayos y lluvia en vivo: satélite GOES-19 de la NOAA. Mareas: tablas de DIMAR/CCCP y modelo GOT5.5 de la NASA. Radioavisos y boletines: DIMAR. Alertas oficiales: IDEAM. Vedas: anuncios de la AUNAP. Mapa: formas de la tierra de Natural Earth (dominio público); municipios del DANE; nombres y posiciones de islas, cabos, golfos, bahías y bajos de <a href="https://www.geonames.org/">GeoNames</a>, bajo licencia <a href="https://creativecommons.org/licenses/by/4.0/deed.es">CC BY 4.0</a>, que Zarpe Seguro adapta (los filtra y los ordena). Líneas de profundidad del GPS: trazadas por Zarpe Seguro a partir del modelo de relieve <a href="https://www.ncei.noaa.gov/products/etopo-global-relief-model">ETOPO 2022</a> de la NOAA (dominio público); son aproximadas, sobre todo cerca de la costa. El mapa sirve para ubicarse; no es una carta náutica ni reemplaza las cartas oficiales de DIMAR.</p>
         </div>
-        <p>La app está pensada para funcionar sin conexión en la medida de lo posible (usando el último dato guardado), pero varias funciones — pronóstico actualizado, radioavisos, sincronización de tu ficha — necesitan internet.</p>
+        <p>La app está pensada para funcionar sin conexión en la medida de lo posible (usando el último dato guardado y avisando cuándo es viejo), pero varias funciones — pronóstico actualizado, rayos, radioavisos, alertas, sincronización de tu ficha — necesitan internet.</p>
+        <p><b>Los avisos (notificaciones) pueden llegar tarde o no llegar</b>: sin señal, con el teléfono apagado, con las notificaciones desactivadas o cuando el ahorro de batería detiene la app. Que no llegue un aviso no significa que el mar o el tiempo estén bien. En la campana de avisos, la opción <span class="mono">¿Me van a avisar?</span> te muestra si tu teléfono está listo para recibirlos.</p>
         <p>La app también usa herramientas de analítica de uso y de reporte de fallos técnicos (PostHog y Sentry) para entender cómo se usa y corregir errores. Qué recogen exactamente y con quién se comparte está en la <a href="#" class="link" data-goto="privacidad" data-anchor="p-5">Política de Privacidad, sección 5</a>.</p>
       </section>
 
@@ -434,7 +438,8 @@
         <h2><span class="num">05</span>El botón SOS</h2>
         <div class="callout danger">
           <span class="icon">⚠</span>
-          <p>El botón SOS envía un mensaje de texto (SMS) automático a tu contacto de emergencia con tu ubicación, y te permite llamar directamente a la <b>línea 146 de la Armada Nacional de Colombia</b>. Esta función <b>depende de que tu teléfono tenga cobertura celular, señal GPS y la app pueda enviar SMS</b> en ese momento — ninguna de esas tres cosas está garantizada en el mar. El SOS de Zarpe Seguro <b>no reemplaza</b> un radio VHF, una baliza satelital (EPIRB/PLB), ni los protocolos oficiales de emergencia marítima. Si tu embarcación cuenta con esos medios, úsalos también.</p>
+          <p><b>Cómo funciona.</b> Al tocar el botón SOS hay 3 segundos para cancelar. Después, la app <b>abre tu aplicación de mensajes con un SMS ya escrito</b> para tu contacto de emergencia, con tu ubicación y un enlace al mapa (si pescas, también los datos de tu embarcación). <b>El mensaje solo sale cuando tú tocas «Enviar»</b>: la app no envía SMS por su cuenta. Si no tienes contacto de emergencia, puedes agregarlo en ese momento o elegir a quién enviarlo. La pantalla SOS también te deja marcar a la <b>línea 146 de la Armada Nacional</b> (emergencias en el mar), a la <b>línea 123</b> y a otras líneas de emergencia, y encender un destello de pantalla y una sirena para que te encuentren.</p>
+          <p><b>Sus límites.</b> El SOS depende de que tu teléfono tenga cobertura celular, señal GPS y saldo para enviar SMS en ese momento — ninguna de esas cosas está garantizada en el mar. Zarpe Seguro no recibe ni reenvía tu SOS, ni avisa por su cuenta a la Armada o a otra autoridad: solo te ayuda a avisar y a llamar. El SOS de Zarpe Seguro <b>no reemplaza</b> un radio VHF, una baliza satelital (EPIRB/PLB), ni los protocolos oficiales de emergencia marítima. Si tu embarcación cuenta con esos medios, úsalos también.</p>
         </div>
       </section>
 
@@ -443,7 +448,7 @@
         <p>Al usar Zarpe Seguro te comprometes a:</p>
         <ul>
           <li>No usar el botón SOS ni la función de contacto de emergencia fuera de una situación real.</li>
-          <li>No ingresar información falsa que pueda poner en riesgo a otra persona (por ejemplo, un contacto de emergencia que no exista).</li>
+          <li>No ingresar información falsa que pueda poner en riesgo a otra persona (por ejemplo, un contacto de emergencia que no exista o que no sepa que lo pusiste).</li>
           <li>No intentar vulnerar, copiar o interferir con el funcionamiento de la app o de los servicios en la nube que la sostienen.</li>
           <li>Usar la app conforme a la ley colombiana.</li>
         </ul>
@@ -451,17 +456,17 @@
 
       <section id="t-7">
         <h2><span class="num">07</span>Propiedad intelectual</h2>
-        <p>El nombre "Zarpe Seguro", el logo, el diseño y el código de la app son propiedad de su equipo desarrollador. Puedes usar la app para tu propio beneficio como pescador o capitán; no puedes copiarla, redistribuirla ni usar la marca sin autorización.</p>
+        <p>El nombre "Zarpe Seguro", el logo, el diseño y el código de la app son propiedad de su equipo desarrollador. Puedes usar la app para tu uso personal; no puedes copiarla, redistribuirla ni usar la marca sin autorización. Los datos de terceros que muestra la app (pronóstico, mapas, mareas, avisos) conservan sus propias licencias, indicadas en «Fuentes de los datos».</p>
       </section>
 
       <section id="t-8">
         <h2><span class="num">08</span>Eliminar tu cuenta</h2>
-        <p>Puedes eliminar tu cuenta en cualquier momento desde <span class="mono">Perfil → Eliminar mi cuenta</span>, dentro de la app. Al hacerlo, tu ficha de embarcación, capturas, cálculos de combustible y puntos marcados dejan de estar disponibles de inmediato. Si ya no tienes la app instalada, también puedes pedir la eliminación por correo — el detalle de ambos caminos, qué se borra y durante cuánto tiempo queda guardada esa información antes de borrarse en definitivo, está en la <a href="#" class="link" data-goto="privacidad" data-anchor="p-7">Política de Privacidad, sección 7</a>.</p>
+        <p>Puedes eliminar tu cuenta en cualquier momento desde <span class="mono">Perfil → Eliminar mi cuenta</span>, dentro de la app. Al hacerlo, tu perfil, tu ficha de embarcación, tu contacto de emergencia, tus capturas, tus cálculos de combustible y tus puntos de pesca dejan de estar disponibles de inmediato. Si ya no tienes la app instalada, también puedes pedir la eliminación por correo — el detalle de ambos caminos, qué se borra y durante cuánto tiempo queda guardada esa información antes de borrarse en definitivo, está en la <a href="#" class="link" data-goto="privacidad" data-anchor="p-7">Política de Privacidad, sección 7</a>.</p>
       </section>
 
       <section id="t-9">
         <h2><span class="num">09</span>Límite de responsabilidad</h2>
-        <p>En la medida permitida por la ley colombiana, el equipo de Zarpe Seguro no se hace responsable por daños, pérdidas o perjuicios derivados de: decisiones de navegación tomadas con base en la información de la app; fallas de red, GPS o del envío del SMS de emergencia; errores o interrupciones del servicio meteorológico de terceros; o el mal uso de la app fuera de su propósito previsto. Zarpe Seguro se ofrece "tal cual" (as-is), sin garantía de disponibilidad continua ni de exactitud absoluta de los datos.</p>
+        <p>En la medida permitida por la ley colombiana, el equipo de Zarpe Seguro no se hace responsable por daños, pérdidas o perjuicios derivados de: decisiones de navegación o de cualquier otro tipo tomadas con base en la información de la app; avisos que lleguen tarde o no lleguen; fallas de red, GPS o del envío del SMS de emergencia; errores o interrupciones de los servicios de datos de terceros; o el mal uso de la app fuera de su propósito previsto. Zarpe Seguro se ofrece "tal cual" (as-is), sin garantía de disponibilidad continua ni de exactitud absoluta de los datos.</p>
       </section>
 
       <section id="t-10">
@@ -487,7 +492,7 @@
         <div class="doc-meta">
           <span class="mono">v1.1</span>
           <span>·</span>
-          <span>Vigente desde el 22 de septiembre de 2026 · actualizado el 18 de octubre de 2026</span>
+          <span>Vigente desde el 22 de septiembre de 2026 · actualizado el 22 de octubre de 2026</span>
           <span>·</span>
           <span>Ley 1581 de 2012 y Decreto 1377 de 2013 (Colombia)</span>
         </div>
@@ -496,7 +501,8 @@
       <div class="summary-box">
         <h2>Resumen — la versión corta</h2>
         <ul>
-          <li>Guardamos tu <b>ficha de embarcación, contacto de emergencia, ubicación, capturas y cálculos de combustible</b> para que la app funcione y para que el botón SOS sepa a quién avisar.</li>
+          <li>Guardamos tu <b>perfil, ficha de embarcación, contacto de emergencia, puntos de pesca, capturas y cálculos de combustible</b> para que la app funcione y para que el botón SOS sepa a quién avisar.</li>
+          <li>Usamos tu <b>ubicación</b> para el pronóstico y los avisos de tu zona. Para avisarte con la app cerrada, tu teléfono se anota a los avisos de tu puerto o de una zona amplia (unos 50 km), no de tu posición exacta.</li>
           <li>Usamos <b>Google</b> para iniciar sesión y nuestro propio <b>servidor</b> (alojado en Hetzner, Alemania) para guardar tu información entre dispositivos.</li>
           <li>Usamos <b>PostHog</b> (analítica de uso) y <b>Sentry</b> (reporte de fallos) para mejorar la app — con un identificador anónimo del teléfono, nunca tu nombre ni tu correo.</li>
           <li>Si eliminas tu cuenta, tus datos <b>dejan de estar disponibles de inmediato</b> y se <b>borran en definitivo a los 30 días</b>.</li>
@@ -529,14 +535,29 @@
                 <td>De tu cuenta de Google, al iniciar sesión</td>
               </tr>
               <tr>
+                <td>Perfil</td>
+                <td>Si eres pescador o no («Soy pescador» / «No soy pescador») y el puerto o lugar que eliges</td>
+                <td>Lo eliges tú en la app</td>
+              </tr>
+              <tr>
                 <td>Ficha de embarcación</td>
-                <td>Nombre y matrícula del bote, nombre del capitán, tripulantes a bordo, motor, nombre y teléfono del contacto de emergencia, foto opcional</td>
-                <td>La escribes tú al registrar tu embarcación</td>
+                <td>Nombre y matrícula del bote, nombre del capitán, tripulantes a bordo, motor, foto opcional</td>
+                <td>La escribes tú al registrar tu embarcación (solo si eres pescador)</td>
+              </tr>
+              <tr>
+                <td>Contacto de emergencia</td>
+                <td>Nombre y número de celular de la persona que eliges</td>
+                <td>Lo escribes tú o lo eliges de la agenda del teléfono. Si lo eliges de la agenda, la app solo lee el nombre y el número de esa persona; no lee el resto de tus contactos ni pide permiso para hacerlo</td>
               </tr>
               <tr>
                 <td>Ubicación</td>
-                <td>Posición GPS en tiempo real, puntos marcados en el mapa (caladeros)</td>
-                <td>El GPS de tu teléfono, mientras usas la app</td>
+                <td>Posición GPS mientras usas la app, y la última posición conocida, que se guarda solo en tu teléfono para revisar los avisos de tu zona con la app cerrada (la app no pide tu ubicación en segundo plano)</td>
+                <td>El GPS de tu teléfono</td>
+              </tr>
+              <tr>
+                <td>Puntos de pesca</td>
+                <td>Nombre, posición, especies y descripción de los puntos que guardas</td>
+                <td>Los guardas tú en la pantalla GPS
               </tr>
               <tr>
                 <td>Bitácora de faena</td>
@@ -551,7 +572,7 @@
               <tr>
                 <td>Alertas SOS</td>
                 <td>Ubicación, hora y tipo de alerta emitida</td>
-                <td>Se registra automáticamente cuando activas el SOS</td>
+                <td>Se registra solo en tu teléfono cuando activas el SOS</td>
               </tr>
               <tr>
                 <td>Uso de la app y fallas técnicas</td>
@@ -561,15 +582,19 @@
             </tbody>
           </table>
         </div>
+        <div class="callout warning">
+          <span class="icon">ℹ</span>
+        <p><b>Datos de otra persona.</b> El nombre y el número de tu contacto de emergencia son datos de un tercero. Al registrarlos declaras que esa persona sabe y está de acuerdo. Solo los usamos para preparar el SMS del SOS y para guardarlos en tu cuenta; no le escribimos ni los compartimos con nadie más. Esa persona puede pedirnos que los borremos escribiendo a <a class="link" href="mailto:dimaps716@gmail.com">dimaps716@gmail.com</a>.</p>
+        </div>
       </section>
 
       <section id="p-4">
         <h2><span class="num">04</span>Para qué usamos tus datos</h2>
         <ul>
-          <li>Mostrarte el pronóstico, las mareas y el semáforo de zarpe de tu puerto.</li>
-          <li>Guardar tu ficha de embarcación, capturas, combustible y puntos marcados, y mantenerlos disponibles si cambias de celular.</li>
-          <li>Activar el botón SOS: avisarle a tu contacto de emergencia por SMS con tu ubicación, y permitirte llamar a la línea 146.</li>
-          <li>Detectar y avisarte de alertas relevantes para tu zona (clima severo, radioavisos DIMAR).</li>
+          <li>Mostrarte el pronóstico, las mareas, la lluvia y los rayos, y el semáforo de zarpe de tu puerto o de tu ubicación.</li>
+          <li>Guardar tu perfil, tu ficha de embarcación, tu contacto de emergencia, tus capturas, tus cálculos de combustible y tus puntos de pesca, y mantenerlos disponibles si cambias de celular.</li>
+          <li>Preparar el SMS del botón SOS para tu contacto de emergencia, con tu ubicación, y permitirte llamar a la línea 146, a la 123 y a otras líneas de emergencia.</li>
+          <li>Detectar y avisarte de alertas relevantes para tu zona (tormentas y rayos, mar peligroso, ciclones, sismos y tsunami, alertas de IDEAM, radioavisos DIMAR), también con la app cerrada.</li>
           <li>Entender qué partes de la app se usan y corregir fallas técnicas, con herramientas de analítica y monitoreo (ver sección 5).</li>
         </ul>
         <p>No usamos tus datos para publicidad ni los vendemos a terceros.</p>
@@ -582,15 +607,15 @@
           <table class="data">
             <thead><tr><th>Proveedor</th><th>Para qué</th></tr></thead>
             <tbody>
-              <tr><td>Google Firebase</td><td>Inicio de sesión con tu cuenta de Google</td></tr>
+              <tr><td>Google Firebase</td><td>Inicio de sesión con tu cuenta de Google. Firebase Cloud Messaging entrega los avisos a tu teléfono: conoce el aviso al que está anotado (tu puerto o una zona de unos 50 km), no tu posición exacta</td></tr>
               <tr><td>Hetzner (alojamiento del servidor)</td><td>Aloja el servidor y la base de datos de Zarpe Seguro, donde se guardan tu ficha, capturas, combustible y puntos de pesca. Hetzner presta la máquina; no accede a tu información</td></tr>
               <tr><td>Neon (base de datos anterior)</td><td>Guardó esa información hasta octubre de 2026 y todavía guarda las fotos de las embarcaciones. Los datos que quedan allí se trasladan a nuestro servidor y se borran de Neon</td></tr>
-              <tr><td>Open-Meteo</td><td>Recibe la ubicación aproximada de tu puerto para calcular el pronóstico — no recibe tu identidad</td></tr>
+              <tr><td>Open-Meteo</td><td>Recibe la posición de tu puerto o, si usas «Mi ubicación GPS» lejos de un puerto, la posición del teléfono, para calcular el pronóstico y la calidad del aire — no recibe tu nombre, tu correo ni tu cuenta</td></tr>
               <tr><td>DIMAR (radioavisos públicos)</td><td>Fuente de los avisos a los navegantes que mostramos en la app — no le enviamos ningún dato tuyo</td></tr>
               <tr><td>PostHog (analítica de producto)</td><td>Entiende qué partes de la app se usan y si las alertas funcionan. Recibe un identificador anónimo del teléfono, generado por la app — nunca tu nombre, tu correo ni tu cuenta de Google</td></tr>
               <tr><td>Sentry (reporte de fallos)</td><td>Recibe un reporte técnico automático cuando la app falla — modelo del teléfono, versión de Android y los pasos previos al error — para poder corregirlo</td></tr>
-              <tr><td>Tu contacto de emergencia</td><td>Recibe un SMS con tu ubicación solo si activas el SOS</td></tr>
-              <tr><td>Armada Nacional (línea 146)</td><td>Solo si llamas desde el botón SOS</td></tr>
+              <tr><td>Tu contacto de emergencia</td><td>Recibe un SMS con tu ubicación solo si activas el SOS y tú envías el mensaje que la app deja listo. El SMS lo envía tu operador de telefonía, no Zarpe Seguro</td></tr>
+              <tr><td>Líneas de emergencia (146, 123 y otras)</td><td>Solo si llamas desde la pantalla SOS. La llamada la haces tú desde el teléfono; la app no les envía datos</td></tr>
             </tbody>
           </table>
         </div>
@@ -609,7 +634,7 @@
         <p>En cualquiera de los dos casos, el proceso es el mismo:</p>
         <ol class="alpha">
           <li>Tu acceso y tus datos dejan de estar disponibles para la app <b>de inmediato</b> (o al procesar tu solicitud por correo).</li>
-          <li>La información — ficha de embarcación, capturas, cálculos de combustible, puntos marcados y registro de aceptación de estos Términos — queda guardada, sin poder usarse, durante <b>30 días</b>, por si necesitas soporte o hay un trámite legal en curso.</li>
+          <li>La información — perfil, ficha de embarcación, contacto de emergencia, capturas, cálculos de combustible, puntos de pesca y registro de aceptación de estos Términos — queda guardada, sin poder usarse, durante <b>30 días</b>, por si necesitas soporte o hay un trámite legal en curso.</li>
           <li>Pasado ese plazo, se <b>borra en definitivo y de forma automática</b> de nuestra base de datos. No conservamos copias más allá de ese período.</li>
         </ol>
       </section>
@@ -624,7 +649,7 @@
           <li><b>Revocar</b> la autorización que nos diste para tratar tus datos.</li>
           <li><b>Presentar quejas</b> ante la Superintendencia de Industria y Comercio si consideras que no respetamos tus derechos.</li>
         </ul>
-        <p>Para actualizar tu ficha, hazlo directamente desde la app. Para cualquier otra solicitud sobre tus datos, escríbenos a <a class="link" href="mailto:dimaps716@gmail.com">dimaps716@gmail.com</a>.</p>
+        <p>Para actualizar tu ficha o tu contacto de emergencia, hazlo directamente desde la app. Para cualquier otra solicitud sobre tus datos, escríbenos a <a class="link" href="mailto:dimaps716@gmail.com">dimaps716@gmail.com</a>.</p>
       </section>
 
       <section id="p-9">
@@ -653,7 +678,7 @@
 
 <footer>
   <span>© 2026 Zarpe Seguro</span>
-  <span class="mono">v1.1 · 2026-09-22</span>
+  <span class="mono">v1.1 · actualizado 2026-10-22</span>
 </footer>
 
 <script>
